@@ -6,27 +6,38 @@
     <title>浙工大泥工杯 | 守望先锋校内赛 宣传&报名</title>
     <style>
         * {margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft Yahei",sans-serif;}
-        body{background:#121520;color:#eee;line-height:1.7;}
+        /* 守望先锋主题配色 */
+        :root{
+            --ow-orange:#ff9900;
+            --ow-orange-dark:#e68a00;
+            --ow-bg-dark:#222222;
+            --ow-card:#2a2a2a;
+            --ow-card-secondary:#383838;
+            --ow-text:#eeeeee;
+            --ow-text-dim:#cccccc;
+        }
+        body{background:var(--ow-bg-dark);color:var(--ow-text);line-height:1.7;}
         .container{max-width:1200px;margin:0 auto;padding:20px;}
-        .hero{background:linear-gradient(135deg,#202942,#0f1422);padding:60px 20px;text-align:center;border-radius:16px;margin-bottom:40px;}
-        .hero h1{font-size:2.6rem;margin-bottom:12px;color:#73b8ff;}
+        .hero{background:linear-gradient(135deg,#383026,#222222);padding:60px 20px;text-align:center;border-radius:16px;margin-bottom:40px;}
+        .hero h1{font-size:2.6rem;margin-bottom:12px;color:var(--ow-orange);}
         .hero p{font-size:1.1rem;opacity:0.85;max-width:750px;margin:0 auto 24px;}
         .btn-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
         .btn{padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;border:none;font-size:1rem;cursor:pointer;transition:0.25s;display:inline-block;}
-        .btn-primary{background:#3484eb;color:#fff;}
-        .btn-secondary{background:#2b3552;color:#fff;}
-        .btn-outline{border:1px solid #73b8ff;background:transparent;color:#73b8ff;}
+        .btn-primary{background:var(--ow-orange);color:#000000;}
+        .btn-primary:hover{background:var(--ow-orange-dark);}
+        .btn-secondary{background:var(--ow-card-secondary);color:var(--ow-text);}
+        .btn-outline{border:1px solid var(--ow-orange);background:transparent;color:var(--ow-orange);}
         .btn-large{padding:18px 48px;font-size:1.25rem;}
         section{margin-bottom:48px;}
-        section h2{font-size:1.7rem;margin-bottom:20px;border-left:5px solid #3484eb;padding-left:12px;}
+        section h2{font-size:1.7rem;margin-bottom:20px;border-left:5px solid var(--ow-orange);padding-left:12px;}
         .card-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
-        .card{background:#1c2336;padding:24px;border-radius:12px;}
-        .timeline-item{background:#1c2336;padding:18px;border-radius:10px;margin-bottom:14px;}
-        .sign-box{background:#1c2336;padding:40px 24px;border-radius:12px;text-align:center;}
-        .faq-item{background:#1c2336;border-radius:10px;margin-bottom:12px;}
+        .card{background:var(--ow-card);padding:24px;border-radius:12px;}
+        .timeline-item{background:var(--ow-card);padding:18px;border-radius:10px;margin-bottom:14px;}
+        .sign-box{background:var(--ow-card);padding:40px 24px;border-radius:12px;text-align:center;}
+        .faq-item{background:var(--ow-card);border-radius:10px;margin-bottom:12px;}
         .faq-q{padding:16px;cursor:pointer;font-weight:bold;}
-        .faq-a{padding:0 16px 16px;display:none;color:#cccccc;}
-        .rule-block{background:#1c2336;padding:22px;border-radius:12px;margin-top:12px;font-size:0.95rem;}
+        .faq-a{padding:0 16px 16px;display:none;color:var(--ow-text-dim);}
+        .rule-block{background:var(--ow-card);padding:22px;border-radius:12px;margin-top:12px;font-size:0.95rem;}
         ul.rule-list{padding-left:20px;margin:8px 0;}
         ul.rule-list li{margin:6px 0;}
 
@@ -34,7 +45,7 @@
         .edit-toggle{position:fixed;right:16px;bottom:16px;z-index:9999;}
         .edit-btn{padding:10px 14px;background:#00c288;color:#000;border:none;border-radius:8px;font-weight:bold;cursor:pointer;}
         .editable.edit-active{outline:2px dashed #42e0aa;outline-offset:4px;}
-        .edit-panel{position:fixed;right:10px;bottom:60px;background:#222;padding:14px;border-radius:10px;display:none;z-index:9998;min-width:260px;}
+        .edit-panel{position:fixed;right:10px;bottom:60px;background:#1a1a1a;padding:14px;border-radius:10px;display:none;z-index:9998;min-width:260px;}
         .edit-panel input,.edit-panel textarea{width:100%;margin:6px 0;padding:8px;background:#333;color:#fff;border:1px solid #555;border-radius:4px;}
         .edit-panel button{margin:4px;padding:6px 10px;cursor:pointer;}
     </style>
@@ -44,7 +55,7 @@
     <!--头部Hero区域【可编辑】-->
     <div class="hero editable" data-type="text">
         <h1 class="editable" data-type="text">2026「泥工杯」守望先锋校内赛</h1>
-        <p class="editable" data-type="text">由浙工大电竞社守望先锋分部主办，浙江工业大学首届守望先锋校内赛事。旨在提供轻松游戏、展示兴趣、享受电竞乐趣的平台，兼顾游戏技巧、团队配合与欢乐氛围。报名截止：2026‑10‑23</p>
+        <p class="editable" data-type="text">由浙工大电竞社守望先锋分部主办，浙江工业大学首届守望先锋校内赛事。旨在为校内学生提供一个轻松游戏、展示兴趣和享受电竞乐趣的平台，兼顾游戏技巧、团队配合与欢乐氛围。报名截止：2026‑10‑23</p>
         <div class="btn-group">
             <a href="#sign" class="btn btn-primary editable" data-type="link">立即报名</a>
             <a href="#rules" class="btn btn-secondary editable" data-type="link">赛事规则</a>
@@ -58,15 +69,15 @@
         <div class="card-wrap">
             <div class="card editable" data-type="text">
                 <h3>面向工大全体玩家</h3>
-                <p>支持本科、研究生、博士生以及毕业校友参赛，新生可凭录取通知书参与。</p>
+                <p>本科、研究生、博士生、毕业校友均可参赛；大一/研一新生可凭录取通知书报名。</p>
             </div>
             <div class="card editable" data-type="text">
-                <h3>段位友好限制</h3>
-                <p>每队宗师及以上段位选手最多2名，降低高分碾压，鼓励更多普通玩家体验竞技。</p>
+                <h3>段位平衡限制</h3>
+                <p>队伍名单（含替补）历史最高段位宗师及以上选手最多2名，降低高分碾压，鼓励普通玩家参与。</p>
             </div>
             <div class="card editable" data-type="text">
                 <h3>完整正规赛制</h3>
-                <p>小组赛循环积分 + 淘汰赛单败淘汰，职责锁定、BP禁用英雄，完整电竞赛事体验。</p>
+                <p>小组赛循环积分+单败淘汰赛；职责锁定、英雄BP禁用、指定首图+败方选图选边。</p>
             </div>
         </div>
     </section>
@@ -78,49 +89,56 @@
             <strong>报名阶段</strong>：即日起 — 2026‑10‑23，点击下方按钮跳转报名表格
         </div>
         <div class="timeline-item editable" data-type="text">
-            <strong>抽签分组</strong>：报名结束后统一进行小组赛抽签分组
+            <strong>抽签分组</strong>：报名截止后随机抽签完成小组赛分组
         </div>
         <div class="timeline-item editable" data-type="text">
             <strong>小组赛阶段</strong>：FT2抢二胜循环积分赛，决出4支晋级淘汰赛队伍
         </div>
         <div class="timeline-item editable" data-type="text">
-            <strong>淘汰赛阶段</strong>：FT3抢三胜单败淘汰赛，半决赛‑季军赛‑决赛
+            <strong>淘汰赛阶段</strong>：FT3抢三胜单败淘汰赛；半决赛、季军赛、决赛依次进行
         </div>
     </section>
 
-    <!--赛事规则摘要-->
+    <!--赛事规则摘要【完全对齐策划手册】-->
     <section id="rules">
         <h2 class="editable" data-type="text">📖 赛事核心规则摘要</h2>
         <div class="rule-block editable" data-type="text">
-            <h3>参赛资格与队伍要求</h3>
+            <h3>参赛资格与队伍规则</h3>
             <ul class="rule-list">
-                <li>选手：浙工大本科/硕博/已毕业校友；新生可凭录取通知书参赛；</li>
-                <li>队伍至少包含3名浙工大在校/校友选手，其余成员为全日制高校在读生；</li>
-                <li>每支队伍最多6人（含替补）；队内历史最高段位宗师及以上选手不超过2人；</li>
-                <li>每名选手仅可代表一支队伍，开赛确认名单后中途不得更换选手。</li>
+                <li>选手资格：浙工大本科/硕博/已毕业校友，其余队员为全日制在籍高校生；新生可凭录取通知书参赛。</li>
+                <li>队伍硬性要求：每队至少包含3名浙工大在校学生或校友；全队最多6人（含替补）。</li>
+                <li>段位限制：队伍全部参赛名单（含替补）历史最高段位宗师及以上选手不超过2名。</li>
+                <li>每名选手仅代表一支队伍；赛前确认参赛名单，比赛中途不允许更换选手。</li>
             </ul>
         </div>
         <div class="rule-block editable" data-type="text">
-            <h3>赛制说明</h3>
+            <h3>赛制与晋级规则</h3>
             <ul class="rule-list">
-                <li>小组赛：抢2胜（FT‑2）循环积分赛，根据积分选出4支队伍晋级淘汰赛；</li>
-                <li>淘汰赛：抢3胜（FT‑3）单败淘汰；半决赛胜者进决赛，败者进行季军赛；</li>
-                <li>比赛使用国服正式服，开启职责锁定：2输出+1重装+2支援；</li>
-                <li>每局双方各一次英雄禁用，不同位置禁用限制；首局指定地图，后续败方选图选边。</li>
+                <li>小组赛：FT‑2抢二胜循环积分赛；按总胜场→胜负关系→净胜负判定小组排名。</li>
+                <li>淘汰赛：FT‑3抢三胜单败淘汰；半决赛胜者进决赛，败者进行季军赛。</li>
+                <li>分组：依据实际队伍数量2‑4组随机抽签；小组赛共4个淘汰赛晋级名额。</li>
             </ul>
         </div>
         <div class="rule-block editable" data-type="text">
-            <h3>其他重要说明</h3>
+            <h3>地图、BP与职责锁定</h3>
             <ul class="rule-list">
-                <li>禁止外挂、代打、假赛、合谋，违规直接取消参赛及获奖资格；</li>
-                <li>比赛争议优先服从裁判判罚，异议可邮件反馈 ediskradinmirror@163.com；</li>
-                <li>参赛即同意赛事对比赛录像、照片影音素材拥有免费使用权；</li>
-                <li>完整赛事手册PDF请查阅赛事群文件，赛事最终解释权归赛事组委会。</li>
+                <li>比赛国服正式服，职责锁定：2输出+1重装+2支援；仅可在两局地图间隙调整职责。</li>
+                <li>每局双方各一次禁用英雄，禁止同位置互禁；一场FT内不可重复禁用同一英雄。</li>
+                <li>首轮指定开局地图；后续由败方选择地图以及攻防顺序；已打过地图不可重复选用。</li>
+            </ul>
+        </div>
+        <div class="rule-block editable" data-type="text">
+            <h3>判罚、申诉与其他约定</h3>
+            <ul class="rule-list">
+                <li>比赛现场遵从裁判判罚；有异议赛后邮件申诉：ediskradinmirror@163.com。</li>
+                <li>严禁外挂、代打、假赛、合谋、利用BUG获利，违规直接取消参赛及获奖资格。</li>
+                <li>参赛即同意赛事方免费使用比赛录像、照片、音视频素材。</li>
+                <li>完整细则参考赛事手册PDF，赛事最终解释权归泥工杯赛事组委会。</li>
             </ul>
         </div>
     </section>
 
-    <!--报名区域：超链接大按钮（新标签打开），完全移除iframe-->
+    <!--报名区域：超链接大按钮（新标签打开）-->
     <section id="sign">
         <h2 class="editable" data-type="text">📝 在线报名</h2>
         <div class="sign-box editable" data-type="text">
@@ -130,7 +148,7 @@
         </div>
     </section>
 
-    <!--FAQ 基于赛事手册重写-->
+    <!--FAQ-->
     <section id="faq">
         <h2 class="editable" data-type="text">❓常见问题FAQ</h2>
         <div class="faq-item">
@@ -178,7 +196,6 @@ let editMode=false;
 let selectedEl=null;
 let pageConfig=JSON.parse(localStorage.getItem('ow_page_config')||'null')||null;
 
-//从本地存储恢复配置
 if(pageConfig){
     document.querySelectorAll('.editable').forEach(el=>{
         const key=el.dataset.type+'-'+Array.from(document.querySelectorAll('.editable')).indexOf(el);
@@ -202,7 +219,6 @@ const saveBtn=document.getElementById('saveEdit');
 const exportBtn=document.getElementById('exportJson');
 const resetBtn=document.getElementById('resetAll');
 
-//开启编辑模式
 function enterEdit(){
     editMode=true;
     document.body.classList.add('edit-on');
@@ -217,7 +233,6 @@ function exitEdit(){
 toggleBtn.onclick=()=> editMode?exitEdit():enterEdit();
 if(autoEdit) enterEdit();
 
-//点击可编辑元素
 document.querySelectorAll('.editable').forEach(el=>{
     el.onclick=(ev)=>{
         if(!editMode) return;
@@ -230,7 +245,6 @@ document.querySelectorAll('.editable').forEach(el=>{
     }
 })
 
-//保存
 saveBtn.onclick=()=>{
     if(!selectedEl) return;
     const idx=Array.from(document.querySelectorAll('.editable')).indexOf(selectedEl);
@@ -249,7 +263,6 @@ saveBtn.onclick=()=>{
     localStorage.setItem('ow_page_config',JSON.stringify(pageConfig));
 }
 
-//导出备份JSON
 exportBtn.onclick=()=>{
     const blob=new Blob([JSON.stringify(pageConfig,null,2)],{type:'application/json'});
     const a=document.createElement('a');
@@ -258,13 +271,11 @@ exportBtn.onclick=()=>{
     a.click();
 }
 
-//重置全部
 resetBtn.onclick=()=>{
     localStorage.removeItem('ow_page_config');
     location.reload();
 }
 
-//FAQ折叠交互
 document.querySelectorAll('.faq-q').forEach(q=>{
     q.onclick=()=>{
         const a=q.nextElementSibling;
